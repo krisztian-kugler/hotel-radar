@@ -26,7 +26,7 @@ export class DataService {
   }
 
   public getUserLocation(): Observable<Object> {
-    const url = "http://ip-api.com/json?fields=country,city,lat,lon";
+    const url = "https://api.ipgeolocation.io/ipgeo?apiKey=80342b63cff74fe1900e748707a38a4e";
     return this.http.get(url);
   }
 
