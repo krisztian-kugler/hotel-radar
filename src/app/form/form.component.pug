@@ -1,0 +1,10 @@
+form((ngSubmit)="onSubmit(form)", #form="ngForm")
+  .search-wrapper
+    input.query(type="text", name="query", placeholder="Look for hotels...", [(ngModel)]="formData.query")
+    .in in
+    input.location(type="text", name="location", placeholder="Location", [(ngModel)]="formData.location")
+    button.submit Search
+  .slider-wrapper
+    .label Distance limit (km): {{ formData.radius / 1000 }}
+    input.slider(type="range", name="radius", min="1000", max="10000", step="1000", [(ngModel)]="formData.radius")
+  

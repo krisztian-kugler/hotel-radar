@@ -1,0 +1,10 @@
+header
+  app-form
+main
+  .results
+    ng-container(*ngIf="dataFetched; then results else searching")
+    ng-template(#searching)
+      .searching Searching for hotels...
+    ng-template(#results)
+      .no-results(*ngIf="venues.length === 0") No hotels found
+      app-venue(*ngFor="let venue of venues", [venue]="venue")

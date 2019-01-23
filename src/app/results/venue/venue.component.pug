@@ -1,0 +1,2 @@
+h1 {{ venue.name }}
+p([ngClass]="{'no-address': !venue.location.address}") {{ venue.location.address ? venue.location.address : "No address provided" }}
